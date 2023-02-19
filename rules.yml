@@ -1,0 +1,35 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Replying to no intent
+  steps:
+  - intent: deny
+  - action: utter_apology
+
+# - rule: Activate music form
+#   steps: 
+#   - intent: play_song
+#   - action: simple_music_form
+#   - active_loop: simple_music_form
+
+# - rule: Submit music form
+#   condition: 
+#   - active_loop: simple_music_form
+#   steps:
+#   - action: simple_music_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: utter_submit_song
+#   - action: utter_music_slots

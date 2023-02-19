@@ -1,0 +1,73 @@
+version: "3.1"
+
+stories:
+
+- story: play music confirmation
+  steps: 
+  - intent: play_song
+  - action: utter_which_song
+  - intent: input_song
+  - action: action_check_song
+  - action: utter_confirm_song
+  - intent: affirm
+  - action: action_confirm_song
+  - action: action_call_api
+
+- story: open location confirmation
+  steps: 
+  - intent: open_maps
+  - action: utter_which_location
+  - intent: input_location
+  - action: action_check_location
+  - action: utter_confirm_location
+  - intent: affirm
+  - action: action_confirm_location
+  - action: action_call_api
+
+- story: call contact confirmation
+  steps: 
+  - intent: call person
+  - action: utter_which_location
+  - intent: input_location
+  - action: action_check_location
+  - action: utter_confirm_location
+  - intent: affirm
+  - action: action_confirm_location
+  - action: action_call_api
+
+# - story: play music affirm
+#   steps:
+#   - intent: play_song
+#   - action: utter_which_song
+#   - intent: input_song
+#   - action: action_check_song
+#   - action: action_call_api
+
+# - story: play music deny
+#   steps:
+#   - action : action_check_song
+#   - intent : deny
+#   - action : utter_apology
+#   - intent : input_song
+#   - action : action_check_song
+
+# - story: play music affirm
+#   steps:
+#   - intent: play_song
+#   - action: utter_which_song
+#   - intent: input_song
+#   - action: simple_music_form
+#   - active_loop: simple_music_form
+#   - slot_was_set:
+#       - requested_slot: song_name
+#   - action: utter_confirm_song
+#   - slot_was_set:
+#     - requested_slot: song_confirmation
+
+# - story: open maps affirm
+#   steps: 
+#   - intent: open_maps
+#   - action: utter_which_location
+#   - intent: input_location
+#   - action: action_check_location
+#   - action: action_call_api
