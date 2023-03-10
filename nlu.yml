@@ -74,6 +74,8 @@ nlu:
     - play music
     - music 
     - songs please
+    - Lets have some music
+    - play songs
   
 - intent: input_song
   examples: |
@@ -108,6 +110,13 @@ nlu:
     - Find this location
     - Where am I?
     - Open google maps
+    - maps
+    - open maps
+    - open location
+    - gmaps
+    - google maps
+    - gps
+    - GPS
 
 - intent: input_location
   examples: |
@@ -135,6 +144,11 @@ nlu:
     - call logs
     - dial
     - talk
+    - call
+    - mobile
+    - contacts
+    - contact list
+    - recent contacts 
 
 - intent: input_contact
   examples: |

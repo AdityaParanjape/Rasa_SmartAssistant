@@ -18,25 +18,15 @@ entities:
  - song_name
  - location_name
  - contact_name
- - API_num
  - input_confirmation
 
 slots:
-  API_num:
-    type: categorical
-    values:
-      - one
-      - two
-      - three
-
-    mappings: 
-    - type: from_entity
-      entity: API_num 
 
   song_name:
     type: text
     mappings:
-    - type: from_text
+    - type: from_entity
+      entity: song_name
   
   input_confirmation:
     type: text
@@ -46,17 +36,15 @@ slots:
   location_name:
     type: text
     mappings:
-    - type: from_text
+    - type: from_entity
+      entity: location_name
     
   contact_name:
     type: text
     mappings:
-    - type: from_text
+    - type: from_entity
+      entity: contact_name
 
-forms: 
-  simple_music_form:
-    required_slots:
-      - song_name
       
 
 responses:
@@ -97,18 +85,15 @@ responses:
   - text: "I will now play the song via the SpotifyAPI"
 
 actions: 
-  - action_call_api
-  - action_set_api_slot_music
-  - action_set_api_slot_location
-  - action_set_api_slot_contact
-  - action_play_song
+  - action_call_spotify_api
+  - action_call_maps_api
+  - action_call_contacts_api
   - action_check_song
   - action_confirm_song
   - action_confirm_location
   - action_check_location
   - action_check_contact
   - action_confirm_contact
-  - validate_simple_music_form
   
 
 session_config:

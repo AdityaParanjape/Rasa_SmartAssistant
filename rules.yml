@@ -17,6 +17,27 @@ rules:
   - intent: deny
   - action: utter_apology
 
+- rule: trigger api song
+  steps:
+  - action: action_check_song
+  - action: utter_confirm_song
+  - intent: affirm
+  - action: action_confirm_song
+
+- rule: trigger api maps
+  steps:
+  - action: action_check_location
+  - action: utter_confirm_location
+  - intent: affirm
+  - action: action_confirm_location
+
+- rule: trigger api contact 
+  steps: 
+  - action: action_check_contact
+  - action: utter_confirm_contact
+  - intent: affirm
+  - action: action_confirm_contact
+
 # - rule: Activate music form
 #   steps: 
 #   - intent: play_song
