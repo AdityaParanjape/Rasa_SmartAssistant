@@ -6,8 +6,8 @@ digraph  {
 3 [class=active, fontsize=12, label=action_check_song];
 4 [class=active, fontsize=12, label=utter_confirm_song];
 5 [class=active, fontsize=12, label=action_confirm_song];
-6 [class=active, fontsize=12, label=action_call_api];
-7 [class=active, fontsize=12, label=utter_goodbye];
+6 [class=active, fontsize=12, label=action_call_spotify_api];
+7 [class=active, fontsize=12, label=action_default_fallback];
 8 [class="intent dashed active", label="  ?  ", shape=rect];
 9 [class="intent active", fillcolor=lightblue, label="/play_song", shape=rect, style=filled];
 10 [class="intent active", fillcolor=lightblue, label="/input_song", shape=rect, style=filled];
